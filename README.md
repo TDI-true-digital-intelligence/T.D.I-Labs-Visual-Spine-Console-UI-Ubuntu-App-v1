@@ -1,4 +1,4 @@
-# SPINE Console
+# SPINE Console Ver.1
 
 <img src="https://raw.githubusercontent.com/agi-digital-dot/agi-digital-dot/main/logo.png" width="75" alt="logo" />
 
@@ -7,6 +7,14 @@ One console for every script that ever runs. Output that can never be lost.
 ![SPINE Console — live](shots/console-live-redacted.png)
 
 *Live console, logs redacted — every script that runs, streaming, searchable, forever.*
+
+**Yes, it's a real installed Ubuntu app** — here it is in the system:
+
+| Settings page | Dock |
+|---|---|
+| ![installed in Ubuntu](shots/app-in-ubuntu-settings.png) | ![dock](shots/app-dock-button.png) |
+
+
 
 
 You run a script. The window closes. Where did the output go? With SPINE: into the system
