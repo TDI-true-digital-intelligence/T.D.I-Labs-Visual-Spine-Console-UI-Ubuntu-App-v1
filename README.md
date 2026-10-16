@@ -30,7 +30,7 @@ Grab the release — zip and snap included:
 
 ![release](shots/release-download.png)
 
-[Download from the releases page](https://github.com/agi-digital-dot/spine-console-v1/releases/tag/v1.0.1)
+[Download from the releases page](https://github.com/agi-digital-dot/spine-console-v1/releases/tag/v1.0.2)
 
 Or from source:
 
