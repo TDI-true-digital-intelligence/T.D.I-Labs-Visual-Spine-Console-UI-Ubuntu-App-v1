@@ -84,4 +84,4 @@ cd ../python-capture && python3 tests/test_regression.py    # 14 passed
 
 ---
 
-Built by [AGI Digital](https://github.com/agi-digital-dot).
+Built by Lord of Bits & Echo ULTRA - Master Control
