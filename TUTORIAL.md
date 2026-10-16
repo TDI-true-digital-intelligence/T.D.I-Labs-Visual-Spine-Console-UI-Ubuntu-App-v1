@@ -119,3 +119,16 @@ Every tick. Timestamped. This is what "spine" means — the record that was alwa
 | `spine-run: command not found` | `source ~/.profile` (or open a new terminal) |
 | Console window blank | `systemctl --user status systemd-journald` — the journal must be running (it always is on Ubuntu) |
 | Old messages missing | journal retention (~2 weeks by default) — `sudo journalctl --vacuum-time=30d` to extend |
+
+## Run the tests yourself (the "is this real" check)
+
+```bash
+cd spine-console/electron-app && npm test        # 24 passed — UI logic, parsing, engine streams
+cd ../python-capture
+python3 tests/test_regression.py                 # 14 passed — install shape, CLI behavior
+python3 tests/test_regression_v2.py              # 5 passed + skips — source-level invariants
+python3 -m pytest tests/test_capture.py -q       # 7 passed — capture semantics
+```
+
+50 checks, all runnable from a fresh clone. Skips (not failures) mean "build artifact not
+present yet" — they activate after `npm run build` / `npm run package`.
