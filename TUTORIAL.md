@@ -57,15 +57,20 @@ There it is — the "hello spine" you ran a minute ago, in a terminal that no lo
 
 ---
 
-## Step 3 — The console itself (30 sec)
+## Step 3 — The console itself (5 min first time, 10 sec after)
 
-The console is a window that shows every script's output, live, in one place:
+The console is a window showing every script's output, live, in one place. One-time setup:
 
 ```bash
-spine-console &
+cd spine-console/electron-app
+npm install-scripts approve --all    # new npm security default — approves electron's download
+npm install                          # first time only (~2 min)
+npm start                            # the window opens
 ```
 
-Type something into the search box — it filters every line, across every script, forever.
+You get the live console: every line from every script, streaming, with a search box
+that filters everything, forever. (Proven from a fresh clone — that exact sequence
+opened the window you see below.)
 
 ![step 3](tutorial/03-console-live.png)
 

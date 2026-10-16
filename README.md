@@ -1,39 +1,22 @@
-# SPINE — the systemd journal console
+# SPINE Console
 
-**One console for every script that ever runs on your machine.**
+<img src="https://raw.githubusercontent.com/agi-digital-dot/agi-digital-dot/main/logo.png" width="75" alt="logo" />
 
-SPINE turns the systemd journal into the spine of your box: every background
-script's output — services, one-offs, pipes — captured live, streamed into one
-beautiful Electron console. Built with **Rust** (tail engine), **Python**
-(capture layer), and **TypeScript** (UI).
+One console for every script that ever runs. Output that can never be lost.
 
-## Why
+You run a script. The window closes. Where did the output go? With SPINE: into the system
+journal — saved forever, searchable forever, streaming live in one console window. Works for
+anything: shell scripts, build jobs, long-running bots, cron tasks.
 
-Ad-hoc scripts (`&`, `nohup`, cron) throw output into the void. Log viewers
-chase files after the fact. SPINE fixes the root: **one capture layer for
-everything, then the view is trivial.**
+- `spine-run` — run any command, output journaled under a tag
+- `spine-cat` — pipe any stream into the journal
+- `spine-tail` — fast engine that reads it all back, live
+- **The Console** — an Electron window: live stream, source list, grep, pause
 
-- Nothing is ever lost — the journal captures by default
-- One query language forever — by unit, tag, priority, time, `--grep`
-- The pattern proven by systemd services, timers, and transient units
+New here? **[TUTORIAL.md](TUTORIAL.md) — the 15-minute picture guide.** Every step proven
+from a fresh clone.
 
-## Architecture
-
-```
-┌────────────────────────── SPINE ──────────────────────────┐
-│                                                           │
-│  scripts ──▶ spine-run / spine-cat ──▶ systemd journal    │
-│                     (Python capture)       │              │
-│                                            ▼              │
-│              spine-tail (Rust engine) ──▶ JSON lines      │
-│                            │                              │
-│                            ▼                              │
-│              SPINE Console (Electron/TS) ──▶ your screen  │
-└───────────────────────────────────────────────────────────┘
-```
-
-| Layer | Language | What it does |
-|---|---|---|
+|---|---|
 | `python-capture` | Python | `spine-run` (run anything, output journaled) · `spine-cat` (pipe into journal with a tag) |
 | `rust-engine` | Rust | `spine-tail` — high-performance journal follower. Reads the journal (or stdin in offline mode), emits JSON lines: one per entry |
 | `electron-app` | TypeScript | SPINE Console — sources sidebar, live stream, filters, search, error highlighting |
