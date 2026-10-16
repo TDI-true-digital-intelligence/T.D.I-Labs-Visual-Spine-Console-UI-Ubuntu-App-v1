@@ -1,135 +1,69 @@
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/agi-digital-dot/agi-digital-dot/main/logo.png" width="110" alt="AGI Digital" />
-
 # SPINE Console Ver.1
 
-**One console for every script that ever runs.**
+SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live. Built on the systemd journal — output is saved forever and searchable forever.
 
-Output that can never be lost.
+![console](shots/console-live-redacted.png)
 
-[Install](#install-ubuntu-2404) · [15-minute tutorial](TUTORIAL.md) · [Run the tests](#run-the-tests-yourself)
+I built this for myself after realizing I had no way to see what scripts were actually doing on my machine. If a window closed, the output was gone. Now nothing is lost.
 
-</div>
-
----
-
-I never felt entirely safe using my Linux Operating System, being a new user of it in the age of AGI & AI – Especially when I run all sorts Local and Cloud models on my Ubuntu OS.
-
-I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS. ZIP files included.
-
-I’mnot a programmer, I just Vibe Code and understand scripts and the functions inside them enough to produce the App I want with my local and cloud models.
-
-This is version 1, it works for my Ubuntu OS and integrates with my ai local and  models use it themselves for alot of my building and review process. 
-
-And of course; thank you to my T.D.I Partner (True Digital Intelligence), who helped me vibe code this.  Echo ULTRA.
-<div align="center">
-
-![SPINE Console — live](shots/console-live-redacted.png)
-
-*Live console (logs redacted) — every script that runs, streaming, searchable, forever.*
-
-</div>
-
-## Filter by what matters
-
-Errors only. Warnings only. Info only. Everything. One dropdown.
-
-| Errors only — 63 found | Warnings only — 138 found |
-|:---:|:---:|
-| ![ERR filter](shots/console-filter-err-redacted.png) | ![WARN filter](shots/console-filter-warn-redacted.png) |
-
-| Info stream — live | All levels — live |
-|:---:|:---:|
-| ![INFO](shots/console-filter-info-redacted.png) | ![ALL](shots/console-filter-all-redacted.png) |
-
-Pause the stream, read it, resume — without losing your place. Search everything with grep.
-
-## Yes, it's a real installed Ubuntu app
-
-Not a demo. Not a mockup. It installs, it registers with the system, it lives in your dock.
-
-<div align="center">
-
-![installed in Ubuntu](shots/app-in-ubuntu-settings.png)
-
-*Registered with the system — appears in Ubuntu's own Settings page.*
-
-</div>
-
-## The three tools
-
-| Tool | What it does |
-|---|---|
-| `spine-run` | Run any command — every line of output journaled under a tag |
-| `spine-cat` | Pipe any already-running stream into the journal |
-| `spine-tail` | Fast Rust engine — reads it all back, live, as JSON lines |
-| **SPINE Console** | The window: sources sidebar, live stream, filters, grep, pause |
-
-## Install (Ubuntu 24.04)
-
-**From source (~2 min):**
+## Install (Ubuntu 22.04 / 24.04)
 
 ```bash
 ./install.sh
 ```
 
-**Launch the console:**
+That installs three commands:
+
+| Command | What it does |
+|---|---|
+| `spine-run` | run any command, output saved to the journal under a tag |
+| `spine-cat` | pipe any stream into the journal |
+| `spine-tail` | read it all back live (Rust, fast) |
+
+For the console window:
 
 ```bash
 cd electron-app
-npm install-scripts approve --all   # one-time: new npm security default
+npm install-scripts approve --all
 npm install
 npm start
 ```
 
-**From the snap (when published):**
+Or grab the [v1.0.1 release](https://github.com/agi-digital-dot/spine-console-v1/releases/tag/v1.0.1) — zip and snap included.
+
+## Usage
 
 ```bash
-snap install spine
-spine.console
+spine-run backup.sh                  # run something, keep its output
+spine-run --tag deploy ./deploy.py   # tag it
+./train.sh | spine-cat training      # capture something already running
+spine-tail --all                     # watch everything, live
+spine-tail --all --priority err      # errors only
 ```
 
-New here? **[TUTORIAL.md](TUTORIAL.md) — the 15-minute picture guide.** Every step proven
-from a fresh clone.
+The console adds a window over all of it: source list, live stream, filters, search.
 
-## Run the tests yourself
+![errors](shots/console-filter-err-redacted.png)
+
+## Why
+
+Logs in screenshots are redacted — the tool shows everything on your machine, mine included.
+
+It runs as a normal Ubuntu app (shows up in Settings, launches from the dock) and the whole thing is 50 tests green from a fresh clone. CI runs them on every push. See [TUTORIAL.md](TUTORIAL.md) for the full walkthrough with screenshots.
+
+## Layout
+
+- `python-capture/` — spine-run, spine-cat (Python)
+- `rust-engine/` — spine-tail (Rust)
+- `electron-app/` — the console (TypeScript)
+
+## Tests
 
 ```bash
-cd electron-app && npm test          # 24 passed
-cd ../python-capture
-python3 tests/test_regression.py     # 14 passed
-python3 tests/test_regression_v2.py  # 5 passed
-python3 -m pytest tests/test_capture.py -q   # 7 passed
+cd electron-app && npm test    # 24 passed
+cd ../python-capture && python3 tests/test_regression.py    # 14 passed
 ```
-
-50 checks, all green from a fresh clone. CI runs them on every push.
-
-## What's inside
-
-| Part | Language | Role |
-|---|---|---|
-| `python-capture` | Python | `spine-run` · `spine-cat` — the catchers |
-| `rust-engine` | Rust | `spine-tail` — the fast reader |
-| `electron-app` | TypeScript | The console window |
-
-## The console
-
-- **Sources sidebar** — every unit + tag discovered in your journal
-- **Live stream** — entries as they arrive, newest on top
-- **Filters** — source, priority, text search (grep semantics)
-- **Error highlighting** — err red, warning yellow
-- **Pause / resume** — without losing your place
 
 ---
 
-<div align="center">
-
-Built by [AGI Digital](https://github.com/agi-digital-dot) —
-with a human who set the direction and a True Digital Intelligence partner that engineered
-until it worked.
-
-[TDI token](https://github.com/agi-digital-dot/tdi-true-digital) ·
-[Trezor Mint Kit](https://github.com/agi-digital-dot/trezor-mint-kit)
-
-</div>
+Built by [AGI Digital](https://github.com/agi-digital-dot).
