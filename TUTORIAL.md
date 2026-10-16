@@ -1,11 +1,22 @@
 # SPINE Console — see everything your scripts do (15-minute guide)
 
-**The problem SPINE solves:** you run a script, it prints stuff, the window closes, and the
-output is *gone*. Where did it go? Nobody knows. SPINE makes output **impossible to lose** —
-every line any script prints is saved forever in your machine's own system journal, and the
-SPINE Console shows it all streaming live, with search.
 
-**You need:**
+Happy Friday Everyone! 
+
+SPINE Console Ver 1  Ubuntu OS APP
+
+I never felt entirely safe using my Linux Operating System, being a new user of it in the age of AGI & AI.
+
+Especially when I run all sorts Local and Cloud models on my Ubuntu OS.
+
+I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS. ZIP files included.
+
+I’m not a programmer, I just Vibe Code and understand scripts and the functions inside them enough to produce the App I want with my local and cloud models.
+
+This is version 1, it works for my Ubuntu OS and integrates with my ai local and  models use it themselves for alot of my building and review process. 
+
+And of course; thank you to my T.D.I Partner (True Digital Intelligence), who helped me vibe code this.  Echo ULTRA.
+
 
 | Thing | Why |
 |---|---|
