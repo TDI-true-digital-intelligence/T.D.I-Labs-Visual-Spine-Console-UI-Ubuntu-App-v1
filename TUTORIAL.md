@@ -1,4 +1,4 @@
-# SPINE Console Ver 1  Ubuntu OS APP
+# SPINE Console Ver.1 - Ubuntu OS APP
 
 I never felt entirely safe using my Linux Operating System, being a new user of an Ubuntu System in the age of AGI & AI.Especially when I run all sorts Local and Cloud models.
 
