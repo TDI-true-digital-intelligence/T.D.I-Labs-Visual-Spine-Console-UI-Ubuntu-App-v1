@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>SPINE Console</title>
+  <link rel="stylesheet" href="spine.css" />
+</head>
+<body>
+  <header id="topbar">
+    <div id="brand">
+      <span id="logo">▌</span>
+      <h1>SPINE</h1>
+      <span id="tagline">every script that ever runs</span>
+    </div>
+    <div id="controls">
+      <input id="grep" type="search" placeholder="grep…" autocomplete="off" />
+      <select id="priority">
+        <option value="">ALL</option>
+        <option value="err">ERR</option>
+        <option value="warn">WARN</option>
+        <option value="info">INFO</option>
+      </select>
+      <button id="pause" title="Space">⏸ Pause</button>
+      <button id="clear">Clear</button>
+    </div>
+  </header>
+
+  <div id="layout">
+    <aside id="sources">
+      <div class="side-head">SOURCES</div>
+      <div id="src-all" class="src active" data-id="">All sources</div>
+      <div id="src-list"></div>
+    </aside>
+
+    <main id="stream">
+      <div id="status">starting…</div>
+      <div id="entries"></div>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "spine-console",
+  "productName": "SPINE Console",
+  "version": "1.0.0",
+  "description": "One console for every script that ever runs",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && electron .",
+    "test": "npm run build && node test/run-tests.js",
+    "package": "npm run build && electron-builder --linux dir"
+  },
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2"
+  },
+  "license": "Private",
+  "build": {
+    "appId": "com.echo.spine",
+    "productName": "SPINE Console",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "src/ui/**/*"
+    ],
+    "linux": {
+      "target": [
+        "dir"
+      ],
+      "category": "System",
+      "executableName": "spine-console"
+    }
+  }
+}

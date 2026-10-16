@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+__pycache__/
+target/
+dist/
+build/
+*.snap
+*.zip
+ship/

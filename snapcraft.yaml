@@ -1,0 +1,64 @@
+name: spine
+title: SPINE
+summary: One console for every script that ever runs
+description: |
+  SPINE turns the systemd journal into the spine of your machine. Run any
+  script through spine-run (or pipe through spine-cat) and its output is
+  captured forever, streamed live into one beautiful console — or queried
+  with one command. Rust engine, Python capture layer, TypeScript UI.
+version: "1.0.1"
+base: core24
+grade: stable
+confinement: strict
+license: Proprietary
+
+apps:
+  spine-run:
+    command: bin/spine-run
+    plugs: [home, network]
+  spine-cat:
+    command: bin/spine-cat
+    plugs: [home, network]
+  spine-tail:
+    command: bin/spine-tail
+    plugs: [home, network, journal-observe]
+  console:
+    command: bin/spine-console
+    plugs: [home, network, journal-observe, desktop, desktop-legacy, x11, wayland, unity7, browser-support]
+    environment:
+      ELECTRON_NO_SANDBOX: "1"
+
+parts:
+  rust-engine:
+    plugin: rust
+    source: rust-engine
+    build-packages: [build-essential, pkg-config]
+    stage-packages: [systemd-journal-remote]
+  python-capture:
+    plugin: python
+    source: python-capture
+    python-packages: [systemd-python]
+    stage:
+      - bin/spine-run
+      - bin/spine-cat
+    override-build: |
+      craftctl default
+      mkdir -p $CRAFT_PART_INSTALL/bin
+      install -m 0755 $CRAFT_PART_BUILD/spine_run.py $CRAFT_PART_INSTALL/bin/spine-run
+      install -m 0755 $CRAFT_PART_BUILD/spine_cat.py $CRAFT_PART_INSTALL/bin/spine-cat
+  electron-console:
+    plugin: nil
+    source: electron-app
+    build-packages: [nodejs, npm]
+    override-build: |
+      craftctl default
+      npm install --no-fund --no-audit
+      npm run build
+      npx electron-builder --linux dir || true
+      mkdir -p $CRAFT_PART_INSTALL/bin $CRAFT_PART_INSTALL/share/spine
+      if [ -d dist/linux-unpacked ]; then
+        cp -r dist/linux-unpacked/* $CRAFT_PART_INSTALL/share/spine/
+        ln -sf ../share/spine/spine-console $CRAFT_PART_INSTALL/bin/spine-console
+      else
+        echo "electron-builder dir output missing — console skipped in snap"
+      fi
