@@ -1,0 +1,32 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install (the TUTORIAL path)
+        run: ./install.sh
+
+      - name: Electron app tests
+        run: |
+          npm install-scripts approve --all || true
+          cd electron-app && npm install --no-audit --no-fund && npm test
+
+      - name: Python suite
+        run: |
+          pip install pytest
+          cd python-capture
+          python3 tests/test_regression.py
+          python3 tests/test_regression_v2.py
+          python3 -m pytest tests/test_capture.py -q
