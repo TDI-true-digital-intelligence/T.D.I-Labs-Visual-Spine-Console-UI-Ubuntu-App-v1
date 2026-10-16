@@ -22,9 +22,7 @@ Info:
 
 ![info](shots/mode-info.png)
 
-It installs as a normal Ubuntu app and shows up in Settings:
 
-![settings](shots/app-in-ubuntu-settings.png)
 
 ## Install (Ubuntu 22.04 / 24.04)
 
