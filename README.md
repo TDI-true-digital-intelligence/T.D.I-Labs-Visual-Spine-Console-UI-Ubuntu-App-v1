@@ -51,9 +51,9 @@ Not a demo. Not a mockup. It installs, it registers with the system, it lives in
 
 <div align="center">
 
-| In Ubuntu Settings | In the dock |
-|:---:|:---:|
-| ![installed in Ubuntu](shots/app-in-ubuntu-settings.png) | ![dock](shots/app-dock-button.png) |
+![installed in Ubuntu](shots/app-in-ubuntu-settings.png)
+
+*Registered with the system — appears in Ubuntu's own Settings page.*
 
 </div>
 
