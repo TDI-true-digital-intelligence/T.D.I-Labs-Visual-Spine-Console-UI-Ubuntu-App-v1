@@ -5,9 +5,9 @@ Happy Friday Everyone!
 
 SPINE Console Ver 1  Ubuntu OS APP
 
-I never felt entirely safe using my Linux Operating System, being a new user of it in the age of AGI & AI.
+I never felt entirely safe using my Linux Operating System, being a new user of Ubuntuin the age of AGI & AI.
 
-Especially when I run all sorts Local and Cloud models on my Ubuntu OS.
+Especially when I run all sorts Local and Cloud models.
 
 I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS.
 
