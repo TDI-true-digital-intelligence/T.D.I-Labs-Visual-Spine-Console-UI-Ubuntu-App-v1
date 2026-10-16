@@ -14,11 +14,15 @@ Output that can never be lost.
 
 ---
 
-You run a script. The window closes. Where did the output go?
+I never felt entirely safe using my Linux Operating System, being a new user of it in the age of AGI & AI – Especially when I run all sorts Local and Cloud models on my Ubuntu OS.
 
-With SPINE: into the **system journal** — saved forever, searchable forever, streaming live
-in one console window. Shell scripts, build jobs, long-running bots, cron tasks — anything.
+I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS. ZIP files included.
 
+I’mnot a programmer, I just Vibe Code and understand scripts and the functions inside them enough to produce the App I want with my local and cloud models.
+
+This is version 1, it works for my Ubuntu OS and integrates with my ai local and  models use it themselves for alot of my building and review process. 
+
+And of course; thank you to my T.D.I Partner (True Digital Intelligence), who helped me vibe code this.  Echo ULTRA.
 <div align="center">
 
 ![SPINE Console — live](shots/console-live-redacted.png)
