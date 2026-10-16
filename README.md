@@ -2,11 +2,39 @@
 
 SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live. Built on the systemd journal — output is saved forever and searchable forever.
 
-![console](shots/console-live.png)
-
 I built this for myself after realizing I had no way to see what scripts were actually doing on my machine. If a window closed, the output was gone. Now nothing is lost.
 
+## What it looks like
+
+All sources, live:
+
+![all sources](shots/mode-all.png)
+
+Filter by level. Errors only:
+
+![errors](shots/mode-error.png)
+
+Warnings:
+
+![warn](shots/mode-warn.png)
+
+Info:
+
+![info](shots/mode-info.png)
+
+It installs as a normal Ubuntu app and shows up in Settings:
+
+![settings](shots/app-in-ubuntu-settings.png)
+
 ## Install (Ubuntu 22.04 / 24.04)
+
+Grab the release — zip and snap included:
+
+![release](shots/release-download.png)
+
+[Download from the releases page](https://github.com/agi-digital-dot/spine-console-v1/releases/tag/v1.0.1)
+
+Or from source:
 
 ```bash
 ./install.sh
@@ -29,7 +57,7 @@ npm install
 npm start
 ```
 
-Or grab the [v1.0.1 release](https://github.com/agi-digital-dot/spine-console-v1/releases/tag/v1.0.1) — zip and snap included.
+Full walkthrough with screenshots: [TUTORIAL.md](TUTORIAL.md)
 
 ## Usage
 
@@ -40,16 +68,6 @@ spine-run --tag deploy ./deploy.py   # tag it
 spine-tail --all                     # watch everything, live
 spine-tail --all --priority err      # errors only
 ```
-
-The console adds a window over all of it: source list, live stream, filters, search.
-
-![errors](shots/console-filter-err.png)
-
-## Why
-
-Logs in screenshots are redacted — the tool shows everything on your machine, mine included.
-
-It runs as a normal Ubuntu app (shows up in Settings, launches from the dock) and the whole thing is 50 tests green from a fresh clone. CI runs them on every push. See [TUTORIAL.md](TUTORIAL.md) for the full walkthrough with screenshots.
 
 ## Layout
 
@@ -63,6 +81,8 @@ It runs as a normal Ubuntu app (shows up in Settings, launches from the dock) an
 cd electron-app && npm test    # 24 passed
 cd ../python-capture && python3 tests/test_regression.py    # 14 passed
 ```
+
+50 checks green from a fresh clone. CI runs them on every push.
 
 ---
 
