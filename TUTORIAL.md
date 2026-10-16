@@ -9,7 +9,7 @@ I never felt entirely safe using my Linux Operating System, being a new user of 
 
 Especially when I run all sorts Local and Cloud models on my Ubuntu OS.
 
-I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS. ZIP files included.
+I vibe coded this Ubuntu (Linux OS) APP for myself, and thought id share it open-source for anyone with an Ubuntu OS.
 
 I’m not a programmer, I just Vibe Code and understand scripts and the functions inside them enough to produce the App I want with my local and cloud models.
 
