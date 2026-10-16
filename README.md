@@ -8,6 +8,16 @@ One console for every script that ever runs. Output that can never be lost.
 
 *Live console, logs redacted — every script that runs, streaming, searchable, forever.*
 
+**Filter by what matters** — errors only, warnings only, or everything live (logs redacted):
+
+| Errors only | Warnings only |
+|---|---|
+| ![ERR filter](shots/console-filter-err-redacted.png) | ![WARN filter](shots/console-filter-warn-redacted.png) |
+
+| Info stream | All levels |
+|---|---|
+| ![INFO](shots/console-filter-info-redacted.png) | ![ALL](shots/console-filter-all-redacted.png) |
+
 **Yes, it's a real installed Ubuntu app** — here it is in the system:
 
 | Settings page | Dock |
