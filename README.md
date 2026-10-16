@@ -2,7 +2,7 @@
 
 SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live. Built on the systemd journal — output is saved forever and searchable forever.
 
-![console](shots/console-live-redacted.png)
+![console](shots/console-live.png)
 
 I built this for myself after realizing I had no way to see what scripts were actually doing on my machine. If a window closed, the output was gone. Now nothing is lost.
 
@@ -43,7 +43,7 @@ spine-tail --all --priority err      # errors only
 
 The console adds a window over all of it: source list, live stream, filters, search.
 
-![errors](shots/console-filter-err-redacted.png)
+![errors](shots/console-filter-err.png)
 
 ## Why
 
