@@ -4,6 +4,11 @@
 
 One console for every script that ever runs. Output that can never be lost.
 
+![SPINE Console — live](shots/console-live-redacted.png)
+
+*Live console, logs redacted — every script that runs, streaming, searchable, forever.*
+
+
 You run a script. The window closes. Where did the output go? With SPINE: into the system
 journal — saved forever, searchable forever, streaming live in one console window. Works for
 anything: shell scripts, build jobs, long-running bots, cron tasks.
