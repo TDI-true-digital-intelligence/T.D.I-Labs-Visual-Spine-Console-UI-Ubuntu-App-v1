@@ -15,9 +15,11 @@ Echo ULTRA.
 
 Thank you for your time to check it out.  
 |---|---|
-| Ubuntu 22.04 or 24.04 |  |
-| Terminal (`Ctrl+Alt+T`) | where the commands go |
-| About 2 minutes | seriously |
+| Ubuntu 22.04 or 24.04 |  
+|
+| Terminal (`Ctrl+Alt+T`) 
+| where the commands go |
+| About 2 minutes |
 
 ---
 
