@@ -18,7 +18,7 @@ Thank you for your time to check it out.
 
 All you need is Ubuntu 22.04 or 24.04 
 
-(This a similar Computer Windows OS or Apple iOS "Comouter Operating Systems" but on Linux OS system called "Ubuntu".)
+(This a similar Computer Windows OS or Apple iOS "Computer Operating Systems" but on Linux OS system called "Ubuntu".)
 
 Start in the Ubuntu Terminal (`Ctrl+Alt+T`) 
 - About 2 minutes running time.
