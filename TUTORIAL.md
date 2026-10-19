@@ -6,9 +6,20 @@ Echo ULTRA.
 # How to Install Tutorial:
 
 
-| Thing | Why |
+| # My free app I created for myself, an T.D.I Labs 'Agentic OS' APP. Created with the help of my T.D.I Partner - Echo ULTRA. 
+
+- This Visual Console Ubuntu App solves being able to view LIVE scripts in a Visual UI console. 
+
+- Especially if you run any local or cloud Ai models on your Ubuntu Linux OS, like Hermes Agent, Openclaw or Codex/Claude. 
+
+- It removes so much backend running script anxiety for myself having so many crons myself running in the background.
+
+Thank you for your time to check it out.  
+
+|
+
 |---|---|
-| Ubuntu 22.04 or 24.04 | everything here is built for it |
+| Ubuntu 22.04 or 24.04 |  |
 | Terminal (`Ctrl+Alt+T`) | where the commands go |
 | About 2 minutes | seriously |
 
