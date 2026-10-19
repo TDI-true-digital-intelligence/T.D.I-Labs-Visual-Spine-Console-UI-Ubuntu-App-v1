@@ -14,9 +14,6 @@ Echo ULTRA.
 - It removes so much backend running script anxiety for myself having so many crons myself running in the background.
 
 Thank you for your time to check it out.  
-
-|
-
 |---|---|
 | Ubuntu 22.04 or 24.04 |  |
 | Terminal (`Ctrl+Alt+T`) | where the commands go |
