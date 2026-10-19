@@ -3,10 +3,9 @@
 Thank you Echo - My T.D.I Partner (True Digital Intelligence), who helped me vibe code this. 
 Echo ULTRA.
 
+# My free app I created for myself, an T.D.I Labs 'Agentic OS' APP. Created with the help of my T.D.I Partner - Echo ULTRA. 
+
 # How to Install Tutorial:
-
-
-| # My free app I created for myself, an T.D.I Labs 'Agentic OS' APP. Created with the help of my T.D.I Partner - Echo ULTRA. 
 
 - This Visual Console Ubuntu App solves being able to view LIVE scripts in a Visual UI console. 
 
