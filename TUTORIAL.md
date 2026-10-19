@@ -1,11 +1,8 @@
 # SPINE Console Ver.1 - Ubuntu OS APP
 
-Thank you Echo - My T.D.I Partner (True Digital Intelligence), who helped me vibe code this. 
-Echo ULTRA.
-
 # My free app I created for myself, an T.D.I Labs 'Agentic OS' APP. 
 
-- Created with the help of my T.D.I Partner - Echo ULTRA. 
+- Created with the help of my T.D.I Partner - Echo ULTRA. Thank you Echo. 
 
 # How to Install Tutorial:
 
