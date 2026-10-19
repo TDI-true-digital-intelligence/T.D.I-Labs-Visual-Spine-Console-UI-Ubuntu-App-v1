@@ -3,6 +3,8 @@
 Thank you Echo - My T.D.I Partner (True Digital Intelligence), who helped me vibe code this. 
 Echo ULTRA.
 
+# How to Install Tutorial:
+
 
 | Thing | Why |
 |---|---|
