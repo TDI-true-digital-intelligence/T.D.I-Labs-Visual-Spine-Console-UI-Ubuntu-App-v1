@@ -1,8 +1,8 @@
-# SPINE Console Ver.1 - Ubuntu OS APP
+# SPINE Console Ver.1 - Ubuntu OS APP - Open-source
 
 # My free app I created for myself.
 
-- T.D.I Labs 'Agentic OS' APP. 
+- T.D.I Labs: Open-source Ubuntu 24.04 OS APP
 
 - Created with the help of my T.D.I Partner - Echo ULTRA. Thank you Echo. 
 
