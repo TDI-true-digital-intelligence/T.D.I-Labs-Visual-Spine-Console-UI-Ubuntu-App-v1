@@ -65,6 +65,16 @@ for rel in ("README.md", "INSTALL.md", "TUTORIAL.md", "snapcraft.yaml", "package
     if p.is_file():
         check(f"no secrets in {rel}", not SECRET.search(p.read_text()))
 
+# --- fonts: royalty-free only, nothing bundled/embedded (Oct 2026 audit) ---
+font_files = [p for p in ROOT.rglob("*") if p.suffix.lower() in (".ttf", ".otf", ".woff", ".woff2") and ".git" not in str(p)]
+check("no font binaries bundled (system fonts only)", not font_files, str(font_files[:3]))
+css = (ROOT / "electron-app/src/ui/spine.css")
+css_text = css.read_text() if css.is_file() else ""
+check("no @font-face / webfont imports", "@font-face" not in css_text and "fonts.googleapis" not in css_text)
+BANNED_FONTS = ("Helvetica", "Arial", "Times New Roman", "Comic Sans")
+for bad in BANNED_FONTS:
+    check(f"no non-free font referenced ({bad})", bad not in css_text)
+
 print(f"PASS {len(PASSES)} / FAIL {len(FAILS)}")
 for f in FAILS:
     print("  FAIL:", f)
