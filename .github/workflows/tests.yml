@@ -30,3 +30,6 @@ jobs:
           python3 tests/test_regression.py
           python3 tests/test_regression_v2.py
           python3 -m pytest tests/test_capture.py -q
+
+      - name: Public compliance (license, disclosure, privacy)
+        run: cd python-capture && python3 tests/test_public_compliance.py

@@ -10,7 +10,7 @@ version: "1.0.1"
 base: core24
 grade: stable
 confinement: strict
-license: Proprietary
+license: MIT
 
 apps:
   spine-run:

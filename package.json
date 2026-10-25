@@ -1,8 +1,10 @@
 {
   "name": "spine",
   "version": "1.0.0",
-  "description": "One console for every script that ever runs — systemd journal as the spine",
+  "description": "One console for every script that ever runs \u2014 systemd journal as the spine",
   "private": true,
-  "license": "Private",
-  "workspaces": ["electron-app"]
+  "license": "MIT",
+  "workspaces": [
+    "electron-app"
+  ]
 }
