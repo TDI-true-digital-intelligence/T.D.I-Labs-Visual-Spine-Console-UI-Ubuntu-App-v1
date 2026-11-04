@@ -2,9 +2,8 @@
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live. Built on the systemd journal — output is saved forever and searchable forever.
+SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live.
 
-I built this for myself after realizing I had no way to see what scripts were actually doing on my machine. If a window closed, the output was gone. Now nothing is lost.
 
 ## What it looks like
 
