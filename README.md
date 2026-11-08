@@ -4,6 +4,38 @@
 
 SPINE Console is a log viewer for Ubuntu that shows you the tail end of every running script, live.
 
+Free and open-source for anyone to download and use on Ubuntu (Linux OS) 
+
+THE PROBLEM:
+
+I never felt entirely safe using my Linux Operating System, being a new user of Ubuntu user in the age of AGI & AI. 
+
+Especially when I run all sorts 'Cron jobs' (auto scripts) automatically with Hermes agent in the background.
+
+THE SOLUTION:
+
+- This app is a visual console that scan every live script that ever runs on your Ubuntu OS. 
+
+- You can separate into script categories, or isolate the window to one entity. 
+
+You can sort by:
+ALL 
+INFO
+WARN
+ERROR
+
+- Its a live tail of every running script, you can pause and copy to feed to your AI agent to fix. 
+
+- And you can connect it to your Local or Cloud OS Agents on Ubuntu simply telling them where the app is when its open. 
+________
+
+Disclaimer: 
+This is vibe coded - please check the GitHub, ive been using it myself for a week. Please feel free to roast me, give me tips on better GitHub workflow, or any security flaws I might have.
+
+I'm not a programmer but I understand Scripts and the functions inside them achieve success. I'm 6 months new to Ubuntu 24.04 and loving it.
+
+This ver.1 of the app, and works for my Ubuntu OS and integrates with my ai local and cloud agent models, who use it themselves for alot of my Agentic OS building and review processes.
+
 
 ## What it looks like
 
