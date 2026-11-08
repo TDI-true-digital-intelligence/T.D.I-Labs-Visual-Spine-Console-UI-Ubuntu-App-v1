@@ -30,9 +30,9 @@ ERROR
 ________
 
 Disclaimer: 
-This is vibe coded - please check the GitHub, ive been using it myself for a week. Please feel free to roast me, give me tips on better GitHub workflow, or any security flaws I might have.
+This is Agentic assist and coded with my EchoULTRA AI agent- please check the GitHub, ive been using it myself daily. Please feel free to roast me, give me tips on better GitHub workflow, or any security flaws I might have.
 
-I'm not a programmer but I understand Scripts and the functions inside them achieve success. I'm 6 months new to Ubuntu 24.04 and loving it.
+I'm an Agentic Engineer and I understand Scripts and the functions inside them achieve success. I'm 6 months new to Ubuntu 24.04 and loving it.
 
 This ver.1 of the app, and works for my Ubuntu OS and integrates with my ai local and cloud agent models, who use it themselves for alot of my Agentic OS building and review processes.
 
